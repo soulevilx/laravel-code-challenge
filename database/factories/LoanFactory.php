@@ -22,7 +22,14 @@ class LoanFactory extends Factory
     public function definition(): array
     {
         return [
-            // TODO: Complete factory
+            'user_id' => User::factory(),
+            'amount' => 5000,
+            'terms' => rand(1,3),
+            'outstanding_amount' => 5000,
+            'currency_code' => 'VND',
+            'processed_at' => date('Y-m-d H:i:s'),
+            'status' => 'due',
+            'created_at' => date('Y-m-d H:i:s')
         ];
     }
 }

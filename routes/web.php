@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DebitCardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::controller(DebitCardController::class)->group(function () {
+    Route::get('/debit-cards', 'index')->name('debitCard');
+    Route::post('/debit-cards', 'store')->name('createDebitCard');
+    Route::get('/debitCardTest', 'test')->name('debitCardTest');
+    Route::post('dc/create', 'create');
+    Route::put('dc/update/{id}', 'update');
+    Route::delete('dc/delete', 'delete');
+}); 
