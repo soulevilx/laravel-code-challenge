@@ -76,6 +76,7 @@ class DebitCardControllerTest extends TestCase
     public function testCustomerCanDeleteADebitCard()
     {
         // delete api/debit-cards/{debitCard}
+        // I don't know why I always get an 404...
         $response = $this->actingAs($this->user)->delete('/api/debit-cards/1');  
         $response->assertStatus(200); 
     }
