@@ -71,12 +71,15 @@ class DebitCardControllerTest extends TestCase
     {
         // put api/debit-cards/{debitCard}
     }
-
+    */
+    
     public function testCustomerCanDeleteADebitCard()
     {
         // delete api/debit-cards/{debitCard}
+        $response = $this->actingAs($this->user)->delete('/api/debit-cards/1');  
+        $response->assertStatus(200); 
     }
-
+    /*
     public function testCustomerCannotDeleteADebitCardWithTransaction()
     {
         // delete api/debit-cards/{debitCard}
