@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('auth:sanctum')->get('/login', function (Request $request) {
+    return $request->user();
+});
+
 Route::middleware('auth:api')
     ->group(function () {
         // Debit card endpoints
