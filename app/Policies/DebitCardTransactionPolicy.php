@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Policies;
+namespace App\Polocies;
 
 use App\Models\DebitCard;
 use App\Models\DebitCardTransaction;
