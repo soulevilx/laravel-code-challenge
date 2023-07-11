@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Polocies;
+namespace App\Policies;
 
 use App\Models\DebitCard;
 use App\Models\User;
