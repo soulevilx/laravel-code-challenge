@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Models\DebitCard;
+use App\Models\DebitCardTransaction;
 use Illuminate\Foundation\Http\FormRequest;
 
 class DebitCardTransactionShowIndexRequest extends FormRequest
