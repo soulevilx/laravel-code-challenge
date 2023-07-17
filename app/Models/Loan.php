@@ -39,23 +39,18 @@ class Loan extends Model
         'status',
     ];
 
-    /**
-     * A Loan belongs to a User
-     *
-     * @return BelongsTo
-     */
-    public function user()
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
     }
 
-    /**
-     * A Loan has many Scheduled Repayments
-     *
-     * @return HasMany
-     */
-    public function scheduledRepayments()
+    public function scheduledRepayments(): HasMany
     {
         return $this->hasMany(ScheduledRepayment::class, 'loan_id');
+    }
+
+    public function receivedRepayments(): HasMany
+    {
+        return $this->hasMany(ReceivedRepayment::class, 'loan_id');
     }
 }
